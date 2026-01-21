@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok App - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #69C9D0, #00f2ea);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .verification-notice {
+            background: #f0f9ff;
+            border: 1px solid #69C9D0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            font-size: 14px;
+            color: #0369a1;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 30px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #69C9D0, #00f2ea);
+            color: white;
+            box-shadow: 0 4px 15px rgba(105, 201, 208, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(105, 201, 208, 0.6);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #69C9D0;
+            color: #69C9D0;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .divider span {
+            padding: 0 10px;
+        }
+        
+        .footer-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #69C9D0;
+        }
+        
+        .features {
+            text-align: left;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .feature-item::before {
+            content: "✓";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #69C9D0;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎵</div>
+        <h1>TikTok App</h1>
+        <p class="subtitle">เชื่อมต่อกับ TikTok และเริ่มใช้งานได้ทันที</p>
+        
+        <div class="verification-notice">
+            <strong>🔒 Domain Verified</strong><br>
+            This site is verified for TikTok developer integration
+        </div>
+        
+        <a href="#" class="btn btn-primary" onclick="handleLogin(event)">
+            🚀 เข้าสู่ระบบด้วย TikTok
+        </a>
+        
+        <div class="divider">
+            <span>หรือดูข้อมูลเพิ่มเติม</span>
+        </div>
+        
+        <div class="features">
+            <div class="feature-item">เข้าถึงวิดีโอและโปรไฟล์ของคุณ</div>
+            <div class="feature-item">วิเคราะห์สถิติและข้อมูล</div>
+            <div class="feature-item">ปลอดภัยและเป็นส่วนตัว</div>
+        </div>
+        
+        <a href="privacy-policy.html" class="btn btn-secondary">
+            📄 นโยบายความเป็นส่วนตัว
+        </a>
+        
+        <a href="terms-of-service.html" class="btn btn-secondary">
+            📋 เงื่อนไขการให้บริการ
+        </a>
+        
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>•</span>
+            <a href="terms-of-service.html">Terms of Service</a>
+            <span>•</span>
+            <a href="mailto:your-email@example.com">Contact</a>
+        </div>
+    </div>
+    
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            // ⚠️ กรุณาแก้ไขค่าเหล่านี้ให้ตรงกับ TikTok App ของคุณ
+            const CLIENT_KEY = 'YOUR_CLIENT_KEY'; // Client Key จาก TikTok Developer Portal
+            const REDIRECT_URI = window.location.origin + window.location.pathname.replace(/\/$/, '') + '/callback.html';
+            
+            // Scopes ที่ต้องการ (ปรับตามที่คุณขอใน TikTok)
+            const SCOPES = [
+                'user.info.basic',
+                'video.list',
+                'video.upload'
+            ].join(',');
+            
+            // สร้าง state เพื่อป้องกัน CSRF
+            const state = generateRandomState();
+            sessionStorage.setItem('tiktok_oauth_state', state);
+            
+            // สร้าง TikTok OAuth URL
+            const authUrl = new URL('https://www.tiktok.com/v2/auth/authorize/');
+            authUrl.searchParams.append('client_key', CLIENT_KEY);
+            authUrl.searchParams.append('scope', SCOPES);
+            authUrl.searchParams.append('response_type', 'code');
+            authUrl.searchParams.append('redirect_uri', REDIRECT_URI);
+            authUrl.searchParams.append('state', state);
+            
+            // ตรวจสอบว่าได้ตั้งค่า CLIENT_KEY หรือยัง
+            if (CLIENT_KEY === 'YOUR_CLIENT_KEY') {
+                alert('⚠️ กรุณาตั้งค่า CLIENT_KEY ใน index.html ก่อนใช้งาน\n\nหาได้จาก TikTok Developer Portal > Your App > Basic Information');
+                return;
+            }
+            
+            // Redirect ไปยัง TikTok OAuth
+            console.log('Redirecting to:', authUrl.toString());
+            window.location.href = authUrl.toString();
+        }
+        
+        function generateRandomState() {
+            const array = new Uint8Array(16);
+            crypto.getRandomValues(array);
+            return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+        }
+    </script>
+</body>
+</html>
